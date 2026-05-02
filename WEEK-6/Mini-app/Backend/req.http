@@ -1,0 +1,29 @@
+###Create employee
+POST http://localhost:4000/emp-api/employee
+Content-Type: application/json
+
+{
+    "name":"Hareesh",
+    "email":"haresh@mail.com",
+    "mobile":123456789876,
+    "designation":"Developer",
+    "companyName":"Amazon"
+}
+###
+GET http://localhost:4000/emp-api/employee
+
+###
+PUT http://localhost:4000/emp-api/employee
+Content-Type: application/json
+
+{
+    "name":"Venkat",
+    "email":"haresh@mail.com",
+    "mobile":123456789876,
+    "designation":"Developer",
+    "companyName":"Amazon"
+}
+
+
+###
+DELETE http://localhost:4000/emp-api/employee/69ca2996712e7381d2683e17
