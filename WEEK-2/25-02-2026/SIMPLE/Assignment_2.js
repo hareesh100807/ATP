@@ -3,8 +3,7 @@
 // Scenario : You are preparing a course list for display on a website.
 
 // Test data:
- const courses = ["javascript", "react", "node", "mongodb", "express"];
-
+const courses = ["javascript", "react", "node", "mongodb", "express"];
 
 // Tasks:
 //     1. filter() courses with name length > 5
@@ -17,17 +16,17 @@
 
 //----------------------------------------------------------------------------------------------------
 //Courses with name length>5
-const lengthOfNames=courses.filter(name=>name.length>5)
-console.log(lengthOfNames)
+const lengthOfNames = courses.filter((name) => name.length > 5);
+console.log(lengthOfNames);
 //Convert to uppercase
-const uppercase=courses.map(name=>name.toUpperCase())
-console.log(uppercase)
+const uppercase = courses.map((name) => name.toUpperCase());
+console.log(uppercase);
 //generating a single string
-const string=courses.reduce((acc,name)=>acc+name+"|","")
-console.log(string.toUpperCase())
+const string = courses.reduce((acc, name) => acc + name + "|", "");
+console.log(string.toUpperCase());
 //finding course react
-const search=courses.find(course=>course==="react")
-console.log(search)
+const search = courses.find((course) => course === "react");
+console.log(search);
 //index of node
-const find=courses.findIndex(course=>course==='node')
-console.log(find)
+const find = courses.findIndex((course) => course === "node");
+console.log(find);

@@ -4,8 +4,8 @@ const user = {
   name: "Ravi",
   preferences: {
     theme: "dark",
-    language: "en"
-    }
+    language: "en",
+  },
 };
 
 // 🎯 Task
@@ -17,11 +17,11 @@ const user = {
 //           iv. Observe what changes and what doesn’t
 
 //creating the copy of an object
-let copyUser={...user}
+let copyUser = { ...user };
 //changing name in the copied obj
-copyUser.name="Hareesh"
+copyUser.name = "Hareesh";
 //changing preferences
-copyUser.preferences.theme="light"
+copyUser.preferences.theme = "light";
 //printing both objects
-console.log(user)
-console.log(copyUser)
+console.log(user);
+console.log(copyUser);

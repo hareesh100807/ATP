@@ -1,6 +1,13 @@
-let marks=[90,78,65,98]
-let sum=0
-for(let i=0;i<marks.length;i++){
-    sum=sum+marks[i];
+/**
+ * @file SumOfArray.js
+ * @description Code assignment for SumOfArray
+ * @author k. v. hareesh
+ * @date 18-02-2026
+ */
+
+let marks = [90, 78, 65, 98];
+let sum = 0;
+for (let i = 0; i < marks.length; i++) {
+  sum = sum + marks[i];
 }
-console.log("Sum of marks is:",sum)
+console.log("Sum of marks is:", sum);

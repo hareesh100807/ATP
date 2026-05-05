@@ -2,17 +2,15 @@
 // ---------------------------------------------------
 
 const order = {
- orderId: "ORD1001",
- customer: {
-  name: "Anita",
-   address: {
-         city: "Hyderabad",
-           pincode: 500085
-      }
+  orderId: "ORD1001",
+  customer: {
+    name: "Anita",
+    address: {
+      city: "Hyderabad",
+      pincode: 500085,
     },
-  items: [
-   { product: "Laptop", price: 70000 }
-     ]
+  },
+  items: [{ product: "Laptop", price: 70000 }],
 };
 
 // 🎯 Task:
@@ -22,14 +20,12 @@ const order = {
 //             ii. items[0].price
 //             iii. Verify original object remains unchanged
 
-
-
 //creating a copy
-let copyOrder=structuredClone(order)
+let copyOrder = structuredClone(order);
 //changing the city
-copyOrder.customer.address.city="Banglore"
+copyOrder.customer.address.city = "Banglore";
 //changing the price
-copyOrder.items[0].price=100000
+copyOrder.items[0].price = 100000;
 //printing both the objects
-console.log(order)
-console.log(copyOrder)
+console.log(order);
+console.log(copyOrder);
