@@ -1,7 +1,18 @@
+/**
+ * Userlist.jsx
+ * -------------
+ * A container component that holds an array of user data and
+ * renders a User card for each one using Array.map().
+ *
+ * Concepts: Component Composition, Array.map(), Props, Keys
+ */
+
 import User from './User';
-function Userlist(props){
-//state
-const users = [
+
+function Userlist(props) {
+    // ─── User Data (State) ───────────────────────────────────
+    // In a real app this would come from an API; here it's hardcoded
+    const users = [
   {
     name: "Aarav Sharma",
     email: "aarav.sharma@example.com",
@@ -52,13 +63,12 @@ const users = [
     email: "kavya.iyer@example.com",
     image: "https://randomuser.me/api/portraits/women/15.jpg"
   }
-];
+    ];
 
-
-    return(
+    return (
         <div>
-            {
-            users.map((userObj, index) => 
+            {/* Map over users array and render a User card for each */}
+            {users.map((userObj, index) =>
                 <User key={index} userObj={userObj} />
             )}
         </div>

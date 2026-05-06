@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import exp from "express";
 import { ProductModel } from "../models/ProductModel.js";
 export const productApp = exp.Router();
@@ -53,3 +54,83 @@ productApp.delete("/products/:id", async (req, res) => {
   }
   res.status(200).json({ message: "Product deleted" });
 });
+=======
+/**
+ * ProductAPI.js
+ * --------------
+ * Express Router implementing full CRUD operations for Products.
+ * Each route handler uses async/await with Mongoose for database interaction.
+ *
+ * Endpoints:
+ *   POST   /products            — Create a new product
+ *   GET    /products            — Read all products
+ *   GET    /products/:productId — Read one product by ID
+ *   PUT    /products/:productId — Update a product by ID
+ *   DELETE /products/:id        — Delete a product by ID
+ *
+ * Concepts: Express Router, Mongoose CRUD, REST API design, async/await
+ */
+
+import exp from 'express';
+import { ProductModel } from '../models/ProductModel.js';
+
+// Create an Express Router instance
+export const productApp = exp.Router();
+
+// ─── CREATE a Product (POST /products) ───────────────────────
+productApp.post('/products', async (req, res) => {
+    // Get product data from the request body
+    const prodObj = req.body;
+
+    // Create a new Mongoose document from the data
+    const newProductDocument = new ProductModel(prodObj);
+
+    // Save the document to MongoDB
+    const result = await newProductDocument.save();
+
+    // Send success response
+    res.status(200).json({ message: "Product created" });
+});
+
+// ─── READ All Products (GET /products) ───────────────────────
+productApp.get('/products', async (req, res) => {
+    let prodList = await ProductModel.find(); // Fetch all documents
+    res.status(200).json({ message: "Products", products: prodList });
+});
+
+// ─── READ One Product by ID (GET /products/:productId) ───────
+productApp.get('/products/:productId', async (req, res) => {
+    const pid = Number(req.params.productId); // Convert param to number
+    console.log(pid);
+
+    const userObj = await ProductModel.findOne({ _id: pid });
+    if (!userObj) {
+        return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json({ message: "Product", payload: userObj });
+});
+
+// ─── UPDATE a Product by ID (PUT /products/:productId) ───────
+productApp.put('/products/:productId', async (req, res) => {
+    const pid = Number(req.params.productId);
+    const prodObj = req.body; // Updated product data
+
+    // findByIdAndUpdate returns the updated document when {new: true}
+    const updatedProduct = await ProductModel.findByIdAndUpdate(pid, prodObj, { new: true });
+    if (!updatedProduct) {
+        return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json({ message: "Product updated", payload: updatedProduct });
+});
+
+// ─── DELETE a Product by ID (DELETE /products/:id) ───────────
+productApp.delete('/products/:id', async (req, res) => {
+    let pid = Number(req.params.id);
+
+    let deletedProduct = await ProductModel.findOneAndDelete({ _id: pid });
+    if (!deletedProduct) {
+        return res.status(404).json({ message: "Product not found" });
+    }
+    res.status(200).json({ message: "Product deleted" });
+});
+>>>>>>> dcbaf92 (Add proper comments and READMEs for all assignments (WEEK-1 to WEEK-6 + BLOGAPP))

@@ -1,22 +1,41 @@
-# Advanced Training Program (ATP)
+# ATP — Advanced Training Program Assignments
 
-Welcome to the main Advanced Training Program repository! This project serves as a comprehensive collection of code assignments, algorithm implementations, and full-stack projects completed over multiple weeks.
+A structured collection of weekly programming assignments covering JavaScript fundamentals, advanced concepts, Node.js/Express APIs, HTML/CSS, React components, and a full-stack blog application.
 
-## Repository Overview
+## 📁 Repository Structure
 
-Below is the structured overview of all the primary folders in this repo:
+```
+ATP/
+├── WEEK-1/       # JavaScript Fundamentals (variables, loops, functions, arrays)
+├── WEEK-2/       # Advanced JS (array methods, modules, OOP, spread/rest, timers)
+├── WEEK-3/       # Node.js + Express REST API with MongoDB (Mongoose)
+├── WEEK-4/       # HTML Fundamentals (elements, lists, images, links)
+├── WEEK-5/       # CSS Flexbox, HTML Tables & React Components
+├── WEEK-6/       # React Forms (react-hook-form) & Full-Stack Mini App
+└── BLOGAPP/      # Full-Stack Blog Application (React + Express + MongoDB)
+```
 
-- **[BLOGAPP](./BLOGAPP)**: A full-stack web application consisting of a React-based frontend and a Node.js/Express backend. Includes authentication, database integration, and UI frameworks.
-- **[WEEK-1](./WEEK-1)**: Contains foundational algorithms, array manipulation logic, and basic mathematical scripts.
-- **[WEEK-2](./WEEK-2)**: Advances into moderately complex problem-solving patterns.
-- **[WEEK-3](./WEEK-3)**: Focuses on core structural components and string manipulation logic.
-- **[WEEK-4](./WEEK-4)**: Covers deep programmatic tasks such as search arrays and nested loops.
-- **[WEEK-5](./WEEK-5)**: Dives into advanced functions and utility implementations.
-- **[WEEK-6](./WEEK-6)**: Advanced structural algorithms and comprehensive logic tasks leading up to mini-apps.
+## 🧠 Technologies Used
 
-## Structure and Standards
-- Source code files contain **JSDoc-style** inline descriptions mapping logic to author and date.
-- Each date-specific folder retains its own `README.md` identifying the exact assignments tackled on that day.
-- Run `npm install` gracefully inside respective directories (like `frontend` or `backend` in BLOGAPP) before initiating local servers.
+- **JavaScript (ES6+)** — Variables, functions, classes, modules, async/await
+- **Node.js & Express.js** — REST API development, middleware, routing
+- **MongoDB & Mongoose** — Database schemas, CRUD operations, validation
+- **HTML5 & CSS3** — Semantic markup, Flexbox, tables
+- **React** — Functional components, hooks, props, forms
+- **Tailwind CSS** — Utility-first styling
+- **Cloudinary & Multer** — Image upload (BlogApp)
+- **JWT** — Authentication (BlogApp)
 
-Happy coding!
+## ▶️ Getting Started
+
+Each week has its own `README.md` with specific instructions. Navigate to any week folder and follow the guide:
+
+```bash
+cd WEEK-1
+cat README.md
+```
+
+## 👤 Author
+
+**K. V. Hareesh**
+- GitHub: [hareesh100807](https://github.com/hareesh100807)

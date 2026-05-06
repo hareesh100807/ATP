@@ -4,7 +4,8 @@ import { useNavigate } from "react-router";
 import { useAuth } from "../store/authStore";
 import { errorClass, loadingClass, successClass } from "../styles/common";
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:4060";
+// Use env var when provided; fallback to relative path when not (prevents localhost requests in production)
+const API_BASE_URL = import.meta.env.VITE_API_URL ?? "";
 
 function AdminProfile() {
   const navigate = useNavigate();
@@ -89,7 +90,7 @@ function AdminProfile() {
 
   return (
     <div className="max-w-6xl mx-auto px-6 py-10">
-      {error && <p className={`${errorClass} mb-4`}>{error}</p>}
+      {error && <p className={`${errorClass} mb-4`}>{String(error)}</p>}
       {message && <p className={`${successClass} mb-4`}>{message}</p>}
 
       <div className="bg-white border border-[#e8e8ed] rounded-3xl p-6 mb-8 shadow-sm flex items-center justify-between">
