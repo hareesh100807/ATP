@@ -7,15 +7,23 @@ config();
 
 const app = exp();
 app.use(exp.json());
-// Allow requests from the Vite dev server (no trailing slash) and handle preflight
+
+// simple request logger to see all incoming requests
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+
+// health-check route
+app.get("/", (req, res) => res.status(200).json({ status: "ok" }));
+
+// Allow requests from the Vite dev server(s) and handle preflight
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: ["http://localhost:5173", "http://localhost:5174"],
     optionsSuccessStatus: 200,
   }),
 );
-// Ensure CORS preflight (OPTIONS) requests are handled
-app.options("*", cors());
 
 app.use("/emp-api", empApp);
 
@@ -25,7 +33,7 @@ const connectDB = async () => {
     const port = process.env.PORT;
     app.listen(port, () => console.log(`server running on port ${port}`));
   } catch (err) {
-    console.log("Error in connecting to databse");
+    console.error("Error in connecting to database", err);
   }
 };
 connectDB();
