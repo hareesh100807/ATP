@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Overview of WEEK-4
 
 This directory contains code and resources for **WEEK-4**.
@@ -32,4 +32,4 @@ WEEK-4/
 ## ▶️ How to View
 
 Open any `.html` file directly in a web browser.
->>>>>>> dcbaf92 (Add proper comments and READMEs for all assignments (WEEK-1 to WEEK-6 + BLOGAPP))
+
