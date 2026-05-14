@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-import { Schema, model } from "mongoose";
-
-const productSchema = new Schema(
-  {
-    productId: {
-      type: Number,
-      required: [true, "productId is required field"],
-    },
-    productName: {
-      type: String,
-      required: [true, "productName is required field"],
-    },
-    price: {
-      type: Number,
-      required: [true, "price is required field"],
-      min: [10000, "Minimum price is 10000"],
-      max: [50000, "Maximum price is 50000"],
-    },
-    brand: {
-      type: String,
-      required: [true, "Brand is required field"],
-    },
-  },
-  {
-    versionKey: false,
-    timestamps: true,
-  },
-);
-export const ProductModel = model("product", productSchema);
 =======
 /**
  * ProductModel.js
@@ -40,7 +10,7 @@ export const ProductModel = model("product", productSchema);
 
 import { Schema, model } from "mongoose";
 
-// ─── Product Schema Definition ───────────────────────────────
+// ─── Product Schema Definition 
 const productSchema = new Schema({
     productId: {
         type: Number,
@@ -67,4 +37,4 @@ const productSchema = new Schema({
 
 // Export the compiled Mongoose model
 export const ProductModel = model("product", productSchema);
->>>>>>> dcbaf92 (Add proper comments and READMEs for all assignments (WEEK-1 to WEEK-6 + BLOGAPP))
+
