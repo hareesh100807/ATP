@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Overview of WEEK-5
 
 This directory contains code and resources for **WEEK-5**.
@@ -53,4 +52,4 @@ open WEEK-5/TABLES/1.html
 # React components — need a React project (e.g., Vite or CRA)
 # Import the components into your App.jsx
 ```
->>>>>>> dcbaf92 (Add proper comments and READMEs for all assignments (WEEK-1 to WEEK-6 + BLOGAPP))
+
