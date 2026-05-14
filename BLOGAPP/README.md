@@ -1,6 +1,11 @@
 # BlogApp — Full-Stack Blog Application
 
 A full-stack blog platform built with **React** (Vite) on the frontend and **Express.js + MongoDB** on the backend. Features user authentication (JWT), role-based access (user, author, admin), article management, and Cloudinary image uploads.
+## 🚀 Live Demo
+
+*🔗 https://capstone-project-tsax.vercel.app/
+
+---
 
 ## 📁 Structure
 
